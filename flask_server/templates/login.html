@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" action="/login" method="POST" onsubmit="handleSubmit(event)">
+      <h2>Registro</h2>
+      <div class="input-box">
+        <input type="text" name="username" required="required" />
+        <span>Usuario</span>
+        <i></i>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" required="required" />
+        <span>Contraseña</span>
+        <i></i>
+      </div>
+      <button type="submit" class="login-btn">Registrar</button>
+      <div id="message" class="message"></div>
+    </form>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
